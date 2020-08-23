@@ -4,7 +4,7 @@
 (function() {
     
     'use strict';
-console.log('Cheat-it the cheat engine is running, we\'ve got you covered!');
+// console.log('Cheat-it the cheat engine is running, we\'ve got you covered!');
     var css = document.createElement('style');
     var head = document.head;
 
@@ -193,7 +193,7 @@ let i=Math.floor(Math.random()*1000+Math.random()*100);
             id:`${i}_fuckeer`,
 question:question
         }
-           console.log(k);
+        //    console.log(k);
             i++
             // axios.post('https://covid19summary-e9297.firebaseio.com/question.json',oqk)
             // .then(res=>console.log(res.data()))
@@ -204,10 +204,10 @@ question:question
           })
           .then(response => response.json())
           .then(data => {
-            console.log('Success:', data);
+            // console.log('Success:', data);
           })
           .catch((error) => {
-            console.error('Error:', error);
+            // console.error('Error:', error);
           });
         
        
@@ -227,10 +227,10 @@ answer:answer
           })
           .then(response => response.json())
           .then(data => {
-            console.log('Success:', data);
+            // console.log('Success:', data);
           })
           .catch((error) => {
-            console.error('Error:', error);
+            // console.error('Error:', error);
           });
 
         }
