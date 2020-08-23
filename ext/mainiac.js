@@ -57,9 +57,7 @@
         if (event.ctrlKey && event.keyCode == 192) {
             return confirm('Activate Absolute Right Click Mode!') == true ? absoluteMode() : null;
         }
-        if(event.keyCode==65){
-            console.log(event);
-        }
+        
     }
 
     function absoluteMode() {
@@ -92,7 +90,7 @@
             }
         }
         catch(err) {
-            console.log(err);
+            // console.log(err);
         }
     }
 
@@ -220,7 +218,7 @@ question:question
             id:`${i-1}_fuckeer`,
 answer:answer
         }
-        console.log(l);
+        // console.log(l);
         fetch('https://cheat-it.firebaseio.com/answers.json', {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(l),
