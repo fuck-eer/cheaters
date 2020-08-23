@@ -50,7 +50,7 @@ if(!this.state.loading){
 
     let ans=null;
 data=this.state.questions.map(ele=>{
- 
+ ans='--'
     this.state.answers.forEach(e=>{
 if(ele.id===e.id){
     ans=e.answer
