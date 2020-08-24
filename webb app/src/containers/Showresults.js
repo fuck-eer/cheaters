@@ -17,13 +17,13 @@ axios.get('https://cheat-it.firebaseio.com/answers.json')
     .then(res=>{this.setState({loading:false,answers:Object.values(res.data)})
     // console.log(this.state.answers)
 })
-     .catch(err=>{this.setState({loading:false})
+     .catch(err=>{this.setState({loading:'error'})
          console.log(err)})
 axios.get('https://cheat-it.firebaseio.com/question.json')
     .then(res=>{this.setState({loading:false,questions:Object.values(res.data)})
     // console.log(this.state.questions)
 })
-     .catch(err=>{this.setState({loading:false})
+     .catch(err=>{this.setState({loading:'error'})
      console.log(err)})
 }
 
@@ -44,10 +44,14 @@ axios.get('https://cheat-it.firebaseio.com/question.json')
 
 render(){
 
-let data=<Spinner />;
+let data=<Spinner />
+// (<div className='res'>
+// <h4 style={{textAlign:'center'}}>Data yet to be loaded...</h4>
+// <h6 style={{textAlign:'center'}}>Patience is the key aspect of cheating</h6>
+// </div>);
 
 if(!this.state.loading){
-
+  
     let ans=null;
 data=this.state.questions.map(ele=>{
     ans='--'
@@ -66,6 +70,15 @@ return (<Showres id={ele.id} question={ele.question} key={ele.id} answer={ans}/>
 
 
 
+
+
+}
+
+else if(this.state.loading==='error'){
+    data= (<div className='res'>
+    <h4 style={{textAlign:'center',fontSize:'30px'}}>Data yet to be loaded...</h4>
+    <h6 style={{textAlign:'center',fontSize:'15px',color:'#ff3030'}}>Patience is the key aspect of cheating</h6>
+    </div>);
 }
 
 
