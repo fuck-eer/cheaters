@@ -73,8 +73,8 @@ return (<Showres id={ele.id} question={ele.question} key={ele.id} answer={ans}/>
 return(
     <div>
     <h2 className='headding'>Cheat-it Database</h2>
-    <p className='inst'><span className='butt'>ctrl</span>+<span className='butt'>rightclick</span> :For Questions<span className='inst1'><span className='butt'>alt</span>+<span className='butt'>rightclick</span> :For Answers</span></p>
-    {/* <span className='inst'><span className='butt'>alt</span>+<span className='butt'>rightclick</span> :For Answers</span> */}
+    <p className='inst'><span className='butt'>ctrl</span>+<span className='butt'>rightclick</span> :For Questions</p>
+    <p className='inst'><span className='butt'>alt</span>+<span className='butt'>rightclick</span> :For Answers</p>
 
    {data}
     </div>
