@@ -56,6 +56,10 @@ if(ele.id===e.id){
     ans=e.answer
 }
  })
+
+//to hide questions from view with no answers 
+//  if(ans==='--')
+//  return null
 return (<Showres id={ele.id} question={ele.question} key={ele.id} answer={ans}/>)
 
 })
