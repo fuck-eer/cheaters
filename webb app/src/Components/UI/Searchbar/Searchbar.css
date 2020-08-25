@@ -73,10 +73,13 @@ font-size:100px;
     }
     .divoinput{
         margin-top:40px;
-        width:100%;
+        width:90%;
 
     }
     .inp{
-    }
+        width:70%;
+        
+            }
+    
 }
 
