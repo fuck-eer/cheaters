@@ -43,7 +43,7 @@ if(this.state.searching){
    if(this.state.results){
        let found=0;
 k=this.state.results.map(e=>{
-    if(e.question.search(this.state.que)>0){
+    if(e.question.toLowerCase().includes(this.state.que.toLowerCase())){
         found++;
         return <Showresult question={e.question} answer={e.answer} id={e.name} key={e.id}/>
     }
