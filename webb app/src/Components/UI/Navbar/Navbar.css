@@ -45,10 +45,35 @@ a{
    
 }
 
+.logo{
+  padding-right: 30px; 
+background-color: #fff;
+}
+
+.logo img{
+    width:65px;
+    float: right;
+  padding: 10px; 
+background-color: #eee;
+border-radius: 2500px;
+box-shadow: 0px 8px 20px #aaa;
+    
+}
+
+@media screen and (max-width:810px){
+    
+   
+   
+    .logo{
+        display: none;
+    }
+}
+
 @media screen and (max-width:600px){
     
    
     nav{
         text-align: center;
     }
+    
 }
