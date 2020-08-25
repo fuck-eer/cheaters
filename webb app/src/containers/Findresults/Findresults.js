@@ -35,14 +35,19 @@ search=()=>{
     let e=this.state.typeed
     this.setState({que:e,searching:true})
 }
-
+keypressed=(event)=>{
+    let e=this.state.typeed
+    if (event.key === "Enter") {
+        this.setState({que:e,searching:true})
+      }
+}
 
 render(){
 let k=<h1 className='search'>SEARCH</h1>;
 if(this.state.searching){
    if(this.state.results){
        let found=0;
-k=this.state.results.map(e=>{
+k=this.state.results.map(e=>{ 
     if(e.question.toLowerCase().includes(this.state.que.toLowerCase())){
         found++;
         return <Showresult question={e.question} answer={e.answer} id={e.name} key={e.id}/>
@@ -60,7 +65,8 @@ if(found===0){
 }
     return(
         <div>
-            <Searchbar valueof={this.state.typeed} changed={(event)=>this.valuechanged(event)} search={this.search} />
+            <Searchbar valueof={this.state.typeed} changed={(event)=>this.valuechanged(event)}
+            keypres={this.keypressed} search={this.search} />
             {k}
         </div>
     );
