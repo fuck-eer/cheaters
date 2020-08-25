@@ -6,26 +6,19 @@ import './showresult.css'
 class Showresults extends Component{
 
 state={
-    questions:[],
-    answers:[],
+    results:[],
     loading:true,
     error:false
 }
 
 
 componentDidMount(){
-axios.get('https://cheat-it.firebaseio.com/answers.json')
-    .then(res=>{this.setState({loading:false,answers:Object.values(res.data)})
-    // console.log(this.state.answers)
+axios.get('https://cors-anywhere.herokuapp.com/my-project-1x.herokuapp.com/combinedqa')
+    .then(res=>{this.setState({loading:false,results:Object.values(res.data)})
+    console.log(this.state.results)
 })
      .catch(err=>{this.setState({loading:false, error:true})
          console.log(err)})
-axios.get('https://cheat-it.firebaseio.com/question.json')
-    .then(res=>{this.setState({loading:false,questions:Object.values(res.data)})
-    // console.log(this.state.questions)
-})
-     .catch(err=>{this.setState({loading:false,error:true})
-     console.log(err)})
 }
 
 // componentDidUpdate(){
@@ -47,22 +40,13 @@ render(){
 
 let data=<Spinner />;
 
-if(!this.state.loading){
+if(!this.state.loading && this.state.error!==true){
 
-    let ans=null;
-data=this.state.questions.map(ele=>{
-  ans='--'
-    this.state.answers.forEach(e=>{
-if(ele.id===e.id){
-    ans=e.answer
-}
+ data=this.state.results.map(e=>{
+if(e.answer==='--')
+{return null}
+    return(<Showres question={e.question} answer={e.answer} id={e.id} key={e.id} />)
  })
- //to hide questions from view with no answers 
-//  if(ans==='--')
-//  return null
-return (<Showres id={ele.id} question={ele.question} key={ele.id} answer={ans}/>)
-
-})
 
 
 
