@@ -10,7 +10,7 @@ let options=option.map((e,i)=>{
     
     // console.log(e);
     return(
-        <Option option={e[0]} people={e[1]}/>
+        <Option option={e[0]} people={e[1]} key={e[0]+e[1]} />
     )
 })
 

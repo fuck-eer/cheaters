@@ -33,7 +33,7 @@ class showstats extends Component{
 
             stats=this.state.stats.map((e,i)=>{
 
-                return <Showstat question={e[0]} options={e[1]}/>
+                return <Showstat question={e[0]} options={e[1]} key={e[0]+e[1]}/>
             })
         }
         
