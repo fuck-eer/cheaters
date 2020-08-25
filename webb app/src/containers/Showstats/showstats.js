@@ -37,16 +37,6 @@ class showstats extends Component{
             })
         }
         
-            
-           
-           
-            
-            
-            
-          
-
-
-
 
         return(
             <div>

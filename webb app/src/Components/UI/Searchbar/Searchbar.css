@@ -5,7 +5,7 @@
     margin-top:80px;
     padding:5px;
     text-align: center;
-    /* background-color: aqua; */
+    
 }
 .inp{
 width:80%;
@@ -49,3 +49,34 @@ transition: all 0.3s ease;
 border:2px solid #ff2020;
     background-color: #ff2020;
 }
+
+.search{
+    text-align:center;
+    color:#ddd;
+    margin:100px auto;
+    font-size:120px;
+}
+.notfound{
+    text-align:center;
+        color:#ddd;
+        margin:100px auto;
+        font-size:120px;
+}
+
+@media screen and (max-width:470px){
+    .notfound{
+font-size:100px;
+    }
+    .search{
+        font-size:80px;
+
+    }
+    .divoinput{
+        margin-top:40px;
+        width:100%;
+
+    }
+    .inp{
+    }
+}
+

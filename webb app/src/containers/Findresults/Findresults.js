@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import '../../Components/UI/Searchbar/Searchbar.css'
 import Showresult from '../../Components/showresult/showresult'
 import Searchbar from '../../Components/UI/Searchbar/Searchbar'
 class Findresult extends Component{
@@ -37,12 +38,7 @@ search=()=>{
 
 
 render(){
-let k=<h1 style={{
-    textAlign:'center',
-    color:'#ddd',
-    margin:'100px auto',
-    fontSize:'120px'
-}}>SEARCH</h1>;
+let k=<h1 className='search'>SEARCH</h1>;
 if(this.state.searching){
    if(this.state.results){
        let found=0;
@@ -55,12 +51,7 @@ k=this.state.results.map(e=>{
 })
 
 if(found===0){
-    k=<h2 style={{
-        textAlign:'center',
-        color:'#ddd',
-        margin:'100px auto',
-        fontSize:'120px'
-    }}>NOT-FOUND</h2>
+    k=<h2 className='notfound'>NOT-FOUND</h2>
 }
 
 
