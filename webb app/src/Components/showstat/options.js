@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import '../showresult/showresult.css'
 
-const elecon = <FontAwesomeIcon icon={faUserAlt} />
+const eleuser = <FontAwesomeIcon icon={faUserAlt} />
 
 const options=(props)=>{
 let persons=props.people
@@ -13,7 +13,7 @@ let persons=props.people
         }
 return(
     
-        <p className='ans'>OPT:{props.option}<span className='people'>{elecon}   {persons}</span></p>
+        <p className='ans'>OPT:{props.option}<span className='people'>{eleuser}   {persons}</span></p>
 );
 
 }

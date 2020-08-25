@@ -8,6 +8,7 @@ return(
              <ul>
                 <NavLink to='/database' exact className='dat' activeClassName='activist'>Database</NavLink>
                 <NavLink to='/stats' exact className='dat' activeClassName='activist'>Statistics</NavLink>
+                <NavLink to='/findit' exact className='dat' activeClassName='activist'>Quick Find</NavLink>
              </ul>
          </nav>
 
