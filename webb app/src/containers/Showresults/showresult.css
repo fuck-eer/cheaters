@@ -5,6 +5,7 @@
     font-weight: 200;
     text-transform: uppercase; 
 }
+
 .inst{
     display: inline-block;
     width: 50%;
@@ -36,9 +37,8 @@
     font-size: 40px;
 
     }
-
-   
 }
+
 @media screen and (max-width:440px){
     
 

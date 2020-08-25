@@ -29,6 +29,12 @@
     color:blue; 
 }
 
+.people{
+color:#ff3030;
+float: right;
+margin-right: 10%;
+}
+
 @media screen and (max-width:710px){
 
     .res{
