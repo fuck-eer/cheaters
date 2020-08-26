@@ -24,7 +24,7 @@ class showstats extends Component{
 
              axios.get('https://cheat-it.firebaseio.com/live.json')
         .then(res=>{this.setState({loading:false,statss:Object.values(res.data)})
-        console.log(this.state.statss)
+        // console.log(this.state.statss)
          })
           .catch(err=>{this.setState({loading:false,error:true})
              console.log(err)})

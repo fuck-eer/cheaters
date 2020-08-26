@@ -38,6 +38,24 @@ float: right;
 margin-right: 10%;
 }
 
+/* <h4 style={{textAlign:'center',fontSize:'25px'}}>It's not working between us T_T</h4>
+    <h6 style={{textAlign:'center',fontSize:'15px',color:'#aaa'}}>Data not present yet... </h6>
+    <h6 style={{width:'95%',textAlign:'right',fontSize:'12px',color:'#ff5050',marginBottom:'10px'}}>It's not you, it's me :(</h6> */
+
+
+    .res h4{
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .res h6{
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+
 @media screen and (max-width:710px){
 
     .res{
@@ -60,5 +78,15 @@ margin-right: 10%;
     font-size: 12px;
         
     }
+
+    /* .res.h6{
+        font-size: 12px;
+
+    }
+
+    .res.h4{
+        font-size: 12px;
+    } */
+
 
 }
