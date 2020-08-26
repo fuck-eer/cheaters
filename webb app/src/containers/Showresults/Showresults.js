@@ -15,7 +15,7 @@ state={
 componentDidMount(){
 axios.get('https://cors-anywhere.herokuapp.com/my-project-1x.herokuapp.com/combinedqa')
     .then(res=>{this.setState({loading:false,results:Object.values(res.data)})
-    console.log(this.state.results)
+    // console.log(this.state.results)
 })
      .catch(err=>{this.setState({loading:false, error:true})
          console.log(err)})
@@ -40,9 +40,9 @@ render(){
 
 let data=<Spinner />;
 
-if(!this.state.loading && this.state.error!==true){
+if(!this.state.loading){
 
- data=this.state.results.map(e=>{
+ data=this.state.results.reverse().map(e=>{
 if(e.answer==='--')
 {return null}
     return(<Showres question={e.question} answer={e.answer} id={e.id} key={e.id} />)
@@ -52,10 +52,12 @@ if(e.answer==='--')
 
 }
 
-if(this.state.error){
+if(this.state.error||this.state.results.length===0){
     data= (<div className='res'>
-    <h4 style={{textAlign:'center',fontSize:'30px'}}>Data yet to be loaded...</h4>
-    <h6 style={{textAlign:'center',fontSize:'15px',color:'#ff3030'}}>Patience is the key aspect of cheating</h6>
+    <h4 style={{textAlign:'center',fontSize:'25px'}}>It's not working between us T_T</h4>
+    <h6 style={{textAlign:'center',fontSize:'15px',color:'#aaa'}}>Data not present yet... </h6>
+    <h6 style={{width:'95%',textAlign:'right',fontSize:'12px',color:'#ff5050',marginBottom:'10px'}}>It's not you, it's me :(</h6>
+
     </div>);
 }
 
