@@ -40,7 +40,7 @@ render(){
 
 let data=<Spinner />;
 
-if(!this.state.loading){
+if(!this.state.loading && this.state.error!==true){
 
  data=this.state.results.reverse().map(e=>{
 if(e.answer==='--')
@@ -52,7 +52,7 @@ if(e.answer==='--')
 
 }
 
-if(this.state.error||this.state.results.length===0){
+if(this.state.error){
     data= (<div className='res'>
     <h4 style={{textAlign:'center',fontSize:'25px'}}>It's not working between us T_T</h4>
     <h6 style={{textAlign:'center',fontSize:'15px',color:'#aaa'}}>Data not present yet... </h6>
