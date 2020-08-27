@@ -15,7 +15,7 @@ searching:false,
 
 
 componentDidMount(){
-    axios.get('http://cors-anywhere.herokuapp.com/ec2-15-207-223-122.ap-south-1.compute.amazonaws.com/combinedqa')
+    axios.get('https://cheatit-server.club/combinedqa')
         .then(res=>{this.setState({loading:false,results:Object.values(res.data)})
         // console.log(this.state.results)
     })

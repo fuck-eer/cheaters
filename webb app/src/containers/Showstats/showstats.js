@@ -22,7 +22,7 @@ class showstats extends Component{
         //   .catch(err=>{this.setState({loading:false})
         //      console.log(err)})
 
-             axios.get('https://cheat-it.firebaseio.com/live.json')
+             axios.get('https://cheatit-server.club/livestats')
         .then(res=>{this.setState({loading:false,statss:Object.values(res.data)})
         // console.log(this.state.statss)
          })
