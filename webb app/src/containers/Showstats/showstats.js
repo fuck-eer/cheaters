@@ -10,7 +10,7 @@ class showstats extends Component{
 
     state={
        loading:true,
-       stats:[],
+       
        statss:[],
         error:false    
     }
@@ -24,10 +24,23 @@ class showstats extends Component{
 
              axios.get('https://cheatit-server.club/livestats')
         .then(res=>{this.setState({loading:false,statss:Object.values(res.data)})
-        // console.log(this.state.statss)
+        console.log(this.state.statss)
          })
           .catch(err=>{this.setState({loading:false,error:true})
              console.log(err)})
+
+             setInterval(()=>{
+            
+                axios.get('https://cheatit-server.club/livestats')
+                .then(res=>{if(this.state.statss.length<=res.data.length)
+                    this.setState({statss:Object.values(res.data)})
+                    console.log('hi');
+                })
+                .catch(e=>{
+                    console.log(e)
+                })
+            },20000)
+             
 }
 
 

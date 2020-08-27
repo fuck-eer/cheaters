@@ -22,6 +22,18 @@ axios.get('https://cheatit-server.club/combinedqa')
      .catch(err=>{this.setState({loading:false, error:true})
          console.log(err)})
 
+         setInterval(()=>{
+            
+            axios.get('https://cheatit-server.club/combinedqa')
+            .then(res=>{if(this.state.results.length<=res.data.length)
+                this.setState({results:Object.values(res.data)})
+                
+            })
+            .catch(e=>{
+                console.log(e)
+            })
+        },30000)
+
          //==========================firebase server link=========================//
 
 // axios.get('https://cheat-it.firebaseio.com/answers.json')
